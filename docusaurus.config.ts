@@ -103,27 +103,32 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Features',
+          title: 'Docs',
           items: [
             {
-              label: 'Javascript or TypeScript ? You choose !',
-              to: '/docs/installation#using-the-boilerplate',
+              label: 'Tutorial',
+              to: '/docs/intro',
+
+
+
+
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
             },
             {
-              label: 'Navigation',
-              to: '/docs/navigate',
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
             },
             {
-              label: 'Data fetching',
-              to: '/docs/data-fetching',
-            },
-            {
-              label: 'Internationalization',
-              to: '/docs/internationalization',
-            },
-            {
-              label: 'Multi theming',
-              to: '/docs/theming/how-to-use',
+              label: 'X',
+              href: 'https://x.com/docusaurus',
             },
           ],
         },
@@ -136,18 +141,17 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              to: 'https://github.com/thecodingmachine/react-native-boilerplate',
+              href: 'https://github.com/facebook/docusaurus',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} React Native Boilerplate, by TheCodingMachine. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-    },
-  } satisfies Preset.ThemeConfig,
+    },} satisfies Preset.ThemeConfig,
 };
 
 export default config;
