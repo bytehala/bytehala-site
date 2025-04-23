@@ -24,6 +24,20 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  plugins: [
+    async function myPlugin() {
+      return {
+        name: 'docusaurus-tailwindcss',
+        configurePostCss(postcssOptions) {
+          // eslint-disable-next-line global-require,import/no-extraneous-dependencies
+          postcssOptions.plugins.push(require('tailwindcss'));
+          // eslint-disable-next-line global-require,import/no-extraneous-dependencies
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
 
   presets: [
     [
@@ -59,8 +73,11 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: 'My Site',
       logo: {
@@ -86,28 +103,27 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Features',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Javascript or TypeScript ? You choose !',
+              to: '/docs/installation#using-the-boilerplate',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Navigation',
+              to: '/docs/navigate',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Data fetching',
+              to: '/docs/data-fetching',
+            },
+            {
+              label: 'Internationalization',
+              to: '/docs/internationalization',
+            },
+            {
+              label: 'Multi theming',
+              to: '/docs/theming/how-to-use',
             },
           ],
         },
@@ -120,12 +136,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              to: 'https://github.com/thecodingmachine/react-native-boilerplate',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} React Native Boilerplate, by TheCodingMachine. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
