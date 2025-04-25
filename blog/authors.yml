@@ -1,23 +1,22 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+bytehala:
+  name: Lem Dulfo
+  title: Senior Software Developer @ Clio
+  url: https://bytehala.com
+  image_url: https://github.com/bytehala.png
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    github: bytehala
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+# slorber:
+#   name: Sébastien Lorber
+#   title: Docusaurus maintainer
+#   url: https://sebastienlorber.com
+#   image_url: https://github.com/slorber.png
+#   page:
+#     # customize the url of the author page at /blog/authors/<permalink>
+#     permalink: '/all-sebastien-lorber-articles'
+#   socials:
+#     x: sebastienlorber
+#     linkedin: sebastienlorber
+#     github: slorber
+#     newsletter: https://thisweekinreact.com

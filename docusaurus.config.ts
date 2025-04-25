@@ -37,6 +37,18 @@ const config: Config = {
         },
       };
     },
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'coolcollection', // Unique ID
+        path: 'coolcollection', // Files live in /news
+        routeBasePath: 'cool', // URL at /news
+        blogTitle: 'Cool',
+        blogDescription: 'Cool stuff bytehala saw on the internet',
+        postsPerPage: 5,
+        showReadingTime: false,
+      },
+    ],
   ],
 
   presets: [
@@ -85,13 +97,14 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'tutorialSidebar',
+        //   position: 'left',
+        //   label: 'Tutorial',
+        // },
+        // {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/cool', label: 'Cool', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',

@@ -1,0 +1,19 @@
+spline:
+  label: Spline
+  permalink: /spline
+  description: Spline Inc 3d
+
+3d:
+  label: 3d
+  permalink: /hello
+  description: 3d
+
+glassmorphism:
+  label: Glassmorphism
+  permalink: /glassmorphism
+  description: Glassmorphism
+
+design:
+  label: design
+  permalink: /design
+  description: Design milk

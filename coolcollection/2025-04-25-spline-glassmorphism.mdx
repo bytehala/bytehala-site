@@ -1,0 +1,22 @@
+---
+slug: spline-glassmorphism
+title: Spline Glassmorphism
+authors: [bytehala]
+tags: [spline, 3d, glassmorphism]
+---
+
+A cool demo I saw on Threads, showcasing this nice chunky rounded matte glass jelly effect.
+I don't know how else to describe it. [Link](https://my.spline.design/glassmorphcursortracking-2ef6d3790000fd1a4f81c92fb3ff5bf5/)
+
+![Screenshot of glassmorphism demo with cursor tracking](./images/spline-glassmorphism.png)
+
+I initially thought it was pure CSS. Turns out, it's a whole 3d "runtime".
+
+```typescript
+  import { Application } from 'https://unpkg.com/@splinetool/runtime@1.9.48/build/runtime.js';
+  const canvas = document.getElementById('canvas3d');
+  const app = new Application(canvas);
+  // ...
+```
+
+Pretty cool. I love the chunky matte effect, it reminds me of sea glass.
