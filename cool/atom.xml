@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://bytehala.com/cool</id>
+    <title>My Site Blog</title>
+    <updated>2025-04-25T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://bytehala.com/cool"/>
+    <subtitle>My Site Blog</subtitle>
+    <icon>https://bytehala.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Spline Glassmorphism]]></title>
+        <id>https://bytehala.com/cool/spline-glassmorphism</id>
+        <link href="https://bytehala.com/cool/spline-glassmorphism"/>
+        <updated>2025-04-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A cool demo I saw on Threads, showcasing this nice chunky rounded matte glass jelly effect.]]></summary>
+        <content type="html"><![CDATA[<p>A cool demo I saw on Threads, showcasing this nice chunky rounded matte glass jelly effect.
+I don't know how else to describe it. <a href="https://my.spline.design/glassmorphcursortracking-2ef6d3790000fd1a4f81c92fb3ff5bf5/" target="_blank" rel="noopener noreferrer">Link</a></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot of glassmorphism demo with cursor tracking" src="https://bytehala.com/assets/images/spline-glassmorphism-c782204aa3931fa0a7174f35c1706d6a.png" width="2488" height="2382" class="img_ev3q"></p>
+<p>I initially thought it was pure CSS. Turns out, it's a whole 3d "runtime".</p>
+<div class="language-typescript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-typescript codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">import</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"> Application </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">from</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">'https://unpkg.com/@splinetool/runtime@1.9.48/build/runtime.js'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> canvas </span><span class="token operator">=</span><span class="token plain"> document</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">getElementById</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">'canvas3d'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">const</span><span class="token plain"> app </span><span class="token operator">=</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">new</span><span class="token plain"> </span><span class="token class-name">Application</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">canvas</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token comment" style="color:rgb(98, 114, 164)">// ...</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Pretty cool. I love the chunky matte effect, it reminds me of sea glass.</p>]]></content>
+        <author>
+            <name>Lem Dulfo</name>
+            <uri>https://bytehala.com</uri>
+        </author>
+        <category label="Spline" term="Spline"/>
+        <category label="3d" term="3d"/>
+        <category label="Glassmorphism" term="Glassmorphism"/>
+    </entry>
+</feed>
