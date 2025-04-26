@@ -22,14 +22,14 @@ const FeatureList: FeatureItem[] = [
         WIP. I'm migrating my dev.to articles.
         <br />
         <br />
+        Dev: nerd stuff
+        <br />
         Cool: stuff I like
         <br />
         <br />
         Coming soon
         <br />
         Life: my blog
-        <br />
-        Dev: nerd stuff
       </>
     ),
   },
