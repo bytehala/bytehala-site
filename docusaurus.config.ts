@@ -42,7 +42,7 @@ const config: Config = {
       {
         id: 'dev', // Unique ID
         path: 'dev-articles',
-        routeBasePath: 'dev', // URL at /coolcollection
+        routeBasePath: 'dev', // URL at /dev
         blogTitle: 'Dev',
         blogDescription: 'Nerd stuff',
         postsPerPage: 5,
@@ -158,11 +158,11 @@ const config: Config = {
           items: [
             {
               label: 'Dev',
-              to: '/dev-articles',
+              to: '/dev',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/bytehala',
             },
           ],
         },
