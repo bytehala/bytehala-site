@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbytehala_site=self.webpackChunkbytehala_site||[]).push([[5933],{4839:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/cool","page":1,"postsPerPage":5,"totalPages":1,"totalCount":1,"blogDescription":"Cool stuff bytehala saw on the internet","blogTitle":"Cool"}}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbytehala_site=self.webpackChunkbytehala_site||[]).push([[4371],{6735:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Spline Glassmorphism","permalink":"/cool/spline-glassmorphism","unlisted":false,"date":"2025-04-25T00:00:00.000Z"}]}')}}]);

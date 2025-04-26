@@ -2,11 +2,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bytehala.com/cool</id>
     <title>My Site Blog</title>
-    <updated>2025-04-25T00:00:00.000Z</updated>
+    <updated>2025-04-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bytehala.com/cool"/>
     <subtitle>My Site Blog</subtitle>
     <icon>https://bytehala.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Visualization of Goldfinch Song Using TouchDesigner]]></title>
+        <id>https://bytehala.com/cool/goldfinch-touchdesigner</id>
+        <link href="https://bytehala.com/cool/goldfinch-touchdesigner"/>
+        <updated>2025-04-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Found on Threads]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://www.threads.com/@visualatelier8/post/DI4d2zxMqm6" target="_blank" rel="noopener noreferrer">Found on Threads</a></p>
+<p>I don't know how to use TouchDesigner, but this is such a great demo. I like that it's in 3d space too. Sound waves are usually represented in 2d because it translates well to paper media, but sound isn't just pitch and volume, so this 3d video is a very interesting approach.</p>
+<video controls="" width="100%"><source src="./goldfinch_touchdesigner.mp4" type="video/mp4"><p>Your browser does not support the video tag.</p></video>]]></content>
+        <author>
+            <name>Lem Dulfo</name>
+            <uri>https://bytehala.com</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ReactNative Boilerplate]]></title>
+        <id>https://bytehala.com/cool/react-native-boilerplate</id>
+        <link href="https://bytehala.com/cool/react-native-boilerplate"/>
+        <updated>2025-04-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Everytime I have an idea for a feature or code, or a pattern, but I don't want to share my company's app screenshots, one of my hurdles is I don't want to start an app from scratch. I always wanted to have a boilerplate, one that has navigation, modals, and most features that Clio's mobile app has. Some non-work analog of what I work with on the daily.]]></summary>
+        <content type="html"><![CDATA[<p>Everytime I have an idea for a feature or code, or a pattern, but I don't want to share my company's app screenshots, one of my hurdles is I don't want to start an app from scratch. I always wanted to have a boilerplate, one that has navigation, modals, and most features that Clio's mobile app has. Some non-work analog of what I work with on the daily.</p>
+<p>I think ReactNative boilerplate solves a lot of that.</p>
+<p><img decoding="async" loading="lazy" alt="React Native Boilerplate website" src="https://bytehala.com/assets/images/react-native-boilerplate-c5b110aeb4a915c6d74a60a125b803e5.png" width="1802" height="2340" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Lem Dulfo</name>
+            <uri>https://bytehala.com</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Spline Glassmorphism]]></title>
         <id>https://bytehala.com/cool/spline-glassmorphism</id>
