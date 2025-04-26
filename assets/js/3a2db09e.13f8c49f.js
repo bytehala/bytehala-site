@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbytehala_site=self.webpackChunkbytehala_site||[]).push([[8121],{8070:e=>{e.exports=JSON.parse('{"tags":[{"label":"Android","permalink":"/blog/tags/android","description":"Android","count":1},{"label":"React Native","permalink":"/blog/tags/react-native","description":"React Native","count":1}]}')}}]);

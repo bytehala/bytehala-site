@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbytehala_site=self.webpackChunkbytehala_site||[]).push([[5592],{4788:e=>{e.exports=JSON.parse('{"blogBasePath":"/dev","blogTitle":"Dev","authorsListPath":"/dev/authors"}')}}]);

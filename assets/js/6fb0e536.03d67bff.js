@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbytehala_site=self.webpackChunkbytehala_site||[]).push([[5752],{1153:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Android Studio Build Failing","permalink":"/dev/android-studio-build-failing","unlisted":false,"date":"2025-04-24T00:00:00.000Z"}]}')}}]);
