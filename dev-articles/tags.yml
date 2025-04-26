@@ -27,3 +27,8 @@ reactnative:
   label: React Native
   permalink: /react-native
   description: React Native
+
+github:
+  label: GitHub
+  permalink: /github
+  description: GitHub
