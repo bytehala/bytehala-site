@@ -40,9 +40,21 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-blog',
       {
+        id: 'dev', // Unique ID
+        path: 'blog', // Files live in /coolcollection
+        routeBasePath: 'dev', // URL at /coolcollection
+        blogTitle: 'Dev',
+        blogDescription: 'Nerd stuff',
+        postsPerPage: 5,
+        showReadingTime: false,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
         id: 'coolcollection', // Unique ID
-        path: 'coolcollection', // Files live in /news
-        routeBasePath: 'cool', // URL at /news
+        path: 'coolcollection', // Files live in /coolcollection
+        routeBasePath: 'cool', // URL at /coolcollection
         blogTitle: 'Cool',
         blogDescription: 'Cool stuff bytehala saw on the internet',
         postsPerPage: 5,
@@ -103,7 +115,7 @@ const config: Config = {
         //   position: 'left',
         //   label: 'Tutorial',
         // },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/dev', label: 'Dev', position: 'left'},
         {to: '/cool', label: 'Cool', position: 'left'},
         {
           href: 'https://github.com/bytehala',
