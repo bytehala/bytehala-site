@@ -89,9 +89,10 @@ const config: Config = {
         //   onInlineAuthors: 'warn',
         //   onUntruncatedBlogPosts: 'warn',
         // },
-        // theme: {
-        //   customCss: './src/css/custom.css',
-        // },
+        theme: {
+          // this gives the custom styling, like buttons, red
+          customCss: './src/css/custom.css',
+        },
       } satisfies Preset.Options,
     ],
   ],
