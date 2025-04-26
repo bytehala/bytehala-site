@@ -9,6 +9,10 @@ type FeatureItem = {
   description: ReactNode;
 };
 
+
+
+
+
 const FeatureList: FeatureItem[] = [
   {
     title: 'Work in Progress',
@@ -51,13 +55,6 @@ const FeatureList: FeatureItem[] = [
   // },
 ];
 
-const Test = async () => {
-
-}
-
-const x = () => {
-    Test();
-}
 
 function Feature({title, Svg, description}: FeatureItem) {
   return (
@@ -73,6 +70,52 @@ function Feature({title, Svg, description}: FeatureItem) {
   );
 }
 
+const Month = ({ birthDate, completed, tooltip }: { birthDate: Date, tooltip: string, completed: 0| 1 | 2 | 3 | 4 }) => {
+  return (
+    <div className={styles.month} title={tooltip}>
+      <div className={clsx(styles.quarter, completed >= 1 && styles.filled)} />
+      <div className={clsx(styles.quarter, completed >= 2 && styles.filled)} />
+      <div className={clsx(styles.quarter, completed >= 3 && styles.filled)} />
+      <div className={clsx(styles.quarter, completed >= 4 && styles.filled)} />
+    </div>
+  );
+};
+
+const Year = ({ birthDate, year }: { birthDate: Date, year: number }) => {
+  const monthNames = Array.from({ length: 12 }, (_, i) =>
+    new Date(0, i).toLocaleString('default', { month: 'long' })
+  );
+  return (
+    <div className={styles.year}>
+      {/* Repeat Month 12 times: */}
+      {monthNames.map((month, index) => (
+        // Anything before the current date is completed=4
+        // Anything after the current date is completed=0
+
+        <Month key={index} birthDate={birthDate} completed={
+          year < new Date().getFullYear() ? 4 :
+          year === new Date().getFullYear() && index < new Date().getMonth() ? 4 :
+          year === new Date().getFullYear() && index === new Date().getMonth() ? 1 :
+          0
+        } tooltip={`${month} ${year}`} />
+      ))}
+    </div>
+  );
+}
+
+export const Lifetime = ({ birthDate }: {birthDate: Date}) => {
+  const lifeExpectancy = Array.from({ length: 80 }, (_, i) => i);
+  return (
+    <div className={styles.lifetimeWrapper}>
+      <div className={styles.lifetime}>
+        <div className={styles.lifetimeInner}>
+          {lifeExpectancy.map((year) => <Year birthDate={birthDate} year={birthDate.getFullYear() + year} />)}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
@@ -82,7 +125,13 @@ export default function HomepageFeatures(): ReactNode {
             <Feature key={idx} {...props} />
           ))}
         </div>
+       
       </div>
+      <div>
+        <br />
+        Weeks before I die:
+      </div>
+      <Lifetime birthDate={new Date(1988, 1, 17)} />
     </section>
   );
 }

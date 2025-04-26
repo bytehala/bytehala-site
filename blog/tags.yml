@@ -17,3 +17,13 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+android:
+  label: Android
+  permalink: /android
+  description: Android
+
+reactnative:
+  label: React Native
+  permalink: /react-native
+  description: React Native

@@ -103,10 +103,10 @@ const config: Config = {
         //   position: 'left',
         //   label: 'Tutorial',
         // },
-        // {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/cool', label: 'Cool', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/bytehala',
           label: 'GitHub',
           position: 'right',
         },

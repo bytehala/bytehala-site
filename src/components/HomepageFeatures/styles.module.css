@@ -1,5 +1,6 @@
 .features {
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
@@ -9,4 +10,52 @@
   margin: 0 auto;
   height: 200px;
   width: 200px;
+}
+
+.month {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1px; /* adjust the separation between pixels */
+  width: 6px; /* total size of the month square */
+  height: 6px;
+}
+
+.quarter {
+  background-color: green; /* default "empty" color */
+  width: 100%;
+  height: 100%;
+}
+
+.filled {
+  background-color: lightgray; /* filled week color */
+}
+
+.year {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lifetimeWrapper {
+  /* width: 100%; */
+  /* max-width: 600px; */
+  /* overflow-x: auto; */
+  /* overflow-y: hidden; */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  scrollbar-width: thin; /* For Firefox */
+}
+
+.lifetime {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.lifetimeInner {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  padding: 8px; /* Add padding here */
 }
