@@ -2,11 +2,36 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bytehala.com/dev</id>
     <title>My Site Blog</title>
-    <updated>2025-04-24T00:00:00.000Z</updated>
+    <updated>2025-04-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bytehala.com/dev"/>
     <subtitle>My Site Blog</subtitle>
     <icon>https://bytehala.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Why Your Github Contributions Are Not Counted]]></title>
+        <id>https://bytehala.com/dev/contributions-not-on-heatmap</id>
+        <link href="https://bytehala.com/dev/contributions-not-on-heatmap"/>
+        <updated>2025-04-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I've been working on my website, and I noticed that my Github heatmap was not updating.]]></summary>
+        <content type="html"><![CDATA[<p>I've been working on my website, and I noticed that my Github heatmap was not updating.
+Okay, some devs can pretend that we don't care about the heatmap, but I can't.</p>
+<p><img decoding="async" loading="lazy" alt="GitHub heatmap showing only 103 contributions" src="https://bytehala.com/assets/images/1_only_103_contribs-7ebc647b94ded2736dc9c47ea03f8f1a.png" width="2208" height="1198" class="img_ev3q"></p>
+<p>I looked commit history, and noticed this weird thing. When I added the CNAME, which is done through GitHub web, it tags the correct author. My other commits, which I did on my laptop, was a different author (still me).</p>
+<p><img decoding="async" loading="lazy" alt="Commit history with wrong user" src="https://bytehala.com/assets/images/2_commit_history-bb696564007a686851bc5380a39a4086.png" width="2212" height="1588" class="img_ev3q"></p>
+<p>So I went and investigated what my local settings were:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">git config --global user.name</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">git config --global user.email</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">git config user.name</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">git config user.email</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>It was something else, somehow I set my iCloud email, and my first name as the <code>user.name</code>.</p>
+<p>Git history is basically just a bunch of files, I know it can be edited. Just be warned, it can sometimes make your repo irrecoverable, and even mangle your history. Try not to do this at your job without proper backups, especially since you'll have to force push.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">git filter-branch -f --env-filter '</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">GIT_COMMITTER_NAME="@bytehala";</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">GIT_COMMITTER_EMAIL="your-correct-email@example.com";</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">GIT_AUTHOR_NAME="@bytehala";</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">GIT_AUTHOR_EMAIL="your-correct-email@example.com";</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">' --tag-name-filter cat -- --branches --tags</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>You'll see this <code>WARNING: git-filter-branch has a glut of gotchas generating mangled history rewrites.</code> I chose to ignore that. heh</p>
+<p>After force pushing, here's my new heatmap, showing I made 141 commits so far this 2025:</p>
+<p><img decoding="async" loading="lazy" alt="New heatmap with correct counts" src="https://bytehala.com/assets/images/3_after_141_contribs-baff52e734743744dd31761e08c2e9dc.png" width="1884" height="694" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Lem Dulfo</name>
+            <uri>https://bytehala.com</uri>
+        </author>
+        <category label="GitHub" term="GitHub"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Android Studio Build Failing]]></title>
         <id>https://bytehala.com/dev/android-studio-build-failing</id>

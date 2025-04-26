@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbytehala_site=self.webpackChunkbytehala_site||[]).push([[3343],{66:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/dev","page":1,"postsPerPage":5,"totalPages":1,"totalCount":2,"blogDescription":"Nerd stuff","blogTitle":"Dev"}}')}}]);
